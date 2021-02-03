@@ -1,4 +1,4 @@
-# Comandos GIT mais usados
+# Comandos mais utilizados
 
 
 # GIT
@@ -13,12 +13,12 @@
 
 ##### Geral
 	git help
-	
+
 ##### Comando específico
 	git help add
 	git help commit
 	git help <qualquer_comando_git>
-	
+
 
 ## Configuração
 
@@ -33,10 +33,10 @@ As configurações realizadas através dos comandos abaixo serão incluídas no 
 
 ##### Setar email
 	git config --global user.email Seu e-mail
-	
+
 ##### Setar editor
 	git config --global core.editor vim
-	
+
 ##### Setar ferramenta de merge
 	git config --global merge.tool vimdiff
 
@@ -75,23 +75,23 @@ Os nomes de arquivos/diretórios ou extensões de arquivos listados no arquivo *
 	git add meu_diretorio
 
 ##### Adicionar todos os arquivos/diretórios
-	
-	git add .	
-	
+
+	git add .
+
 ##### Adicionar um arquivo que esta listado no .gitignore (geral ou do repositório)
-	
+
 	git add -f arquivo_no_gitignore.txt
-	
+
 ### Comitar arquivo/diretório
 
 ##### Comitar um arquivo
-	
+
 	git commit meu_arquivo.txt
 
 ##### Comitar vários arquivos
 
 	git commit meu_arquivo.txt meu_outro_arquivo.txt
-	
+
 ##### Comitar informando mensagem
 
 	git commit meuarquivo.txt -m "minha mensagem de commit"
@@ -109,25 +109,25 @@ Os nomes de arquivos/diretórios ou extensões de arquivos listados no arquivo *
 ### Visualizar histórico
 
 ##### Exibir histórico
-	
+
 	git log
-	
+
 ##### Exibir histórico com diff das duas últimas alterações
 
 	git log -p -2
-	
+
 ##### Exibir resumo do histórico (hash completa, autor, data, comentário e qtde de alterações (+/-))
 
 	git log --stat
-	
+
 ##### Exibir informações resumidas em uma linha (hash completa e comentário)
 
 	git log --pretty=oneline
-	
+
 ##### Exibir histórico com formatação específica (hash abreviada, autor, data e comentário)
 
 	git log --pretty=format:"%h - %an, %ar : %s"
-	
+
 * %h: Abreviação do hash;
 * %an: Nome do autor;
 * %ar: Data;
@@ -155,12 +155,12 @@ Verifique as demais opções de formatação no [Git Book](http://git-scm.com/bo
 
 ##### Exibir revisão e autor da última modificação de uma bloco de linhas
 
-	git blame -L 12,22 meu_arquivo.txt 
+	git blame -L 12,22 meu_arquivo.txt
 
 ### Desfazendo operações
 
 ##### Desfazendo alteração local (working directory)
-Este comando deve ser utilizando enquanto o arquivo não foi adicionado na **staged area**. 
+Este comando deve ser utilizando enquanto o arquivo não foi adicionado na **staged area**.
 
 	git checkout -- meu_arquivo.txt
 
@@ -169,13 +169,13 @@ Este comando deve ser utilizando quando o arquivo já foi adicionado na **staged
 
 	git reset HEAD meu_arquivo.txt
 
-Se o resultado abaixo for exibido, o comando reset *não* alterou o diretório de trabalho. 
+Se o resultado abaixo for exibido, o comando reset *não* alterou o diretório de trabalho.
 
 	Unstaged changes after reset:
 	M	meu_arquivo.txt
 
 A alteração do diretório pode ser realizada através do comando abaixo:
-	
+
 	git checkout meu_arquivo.txt
 
 ## Repositório Remoto
@@ -183,23 +183,23 @@ A alteração do diretório pode ser realizada através do comando abaixo:
 ### Exibir os repositórios remotos
 
 	git remote
-	
+
 	git remote -v
 
 ### Vincular repositório local com um repositório remoto
 
 	git remote add origin git@github.com:leocomelli/curso-git.git
-	
+
 ### Exibir informações dos repositórios remotos
 
 	git remote show origin
-	
-### Renomear um repositório remoto 
+
+### Renomear um repositório remoto
 
 	git remote rename origin curso-git
-	
+
 ### Desvincular um repositório remoto
-	
+
 	git remote rm curso-git
 
 ### Enviar arquivos/diretórios para o repositório remoto
@@ -207,26 +207,26 @@ A alteração do diretório pode ser realizada através do comando abaixo:
 O primeiro **push** de um repositório deve conter o nome do repositório remoto e o branch.
 
 	git push -u origin master
-	
+
 Os demais **pushes** não precisam dessa informação
 
 	git push
-	
+
 
 ### Atualizar repositório local de acordo com o repositório remoto
 
 ##### Atualizar os arquivos no branch atual
 
 	git pull
-	
+
 ##### Buscar as alterações, mas não aplica-las no branch atual
 
 	git fetch
-	
+
 ### Clonar um repositório remoto já existente
 
 	git clone git@github.com:leocomelli/curso-git.git
-	
+
 ### Tags
 
 ##### Criando uma tag leve
@@ -245,15 +245,15 @@ Para criar uma tag assinada é necessário uma chave privada (GNU Privacy Guard 
 ##### Criando tag a partir de um commit (hash)
 
 	git tag -a vs-1.2 9fceb02
-	
+
 ##### Criando tags no repositório remoto
 
 	git push origin vs-1.2
-	
+
 ##### Criando todas as tags locais no repositório remoto
 
 	git push origin --tags
-	
+
 ### Branches
 
 O **master** é o branch principal do GIT.
@@ -263,25 +263,25 @@ O **HEAD** é um ponteiro *especial* que indica qual é o branch atual. Por padr
 ##### Criando um novo branch
 
 	git branch bug-123
-	
+
 ##### Trocando para um branch existente
 
 	git checkout bug-123
-	
+
 Neste caso, o ponteiro principal **HEAD** esta apontando para o branch chamado bug-123.
 
-##### Criar um novo branch e trocar 
+##### Criar um novo branch e trocar
 
 	git checkout -b bug-456
-	
+
 ##### Voltar para o branch principal (master)
 
 	git checkout master
-	
+
 ##### Resolver merge entre os branches
 
 	git merge bug-123
-	
+
 Para realizar o *merge*, é necessário estar no branch que deverá receber as alterações. O *merge* pode automático ou manual. O merge automático será feito em arquivos textos que não sofreram alterações nas mesmas linhas, já o merge manual será feito em arquivos textos que sofreram alterações nas mesmas linhas.
 
 A mensagem indicando um *merge* manual será:
@@ -295,7 +295,7 @@ A mensagem indicando um *merge* manual será:
 
 	git branch -d bug-123
 
-##### Listar branches 
+##### Listar branches
 
 ###### Listar branches
 
@@ -337,9 +337,9 @@ A mensagem indicando um *merge* manual será:
 Fazendo o **rebase** entre um o branch bug-123 e o master.
 
 	git checkout experiment
-	
+
 	git rebase master
-	
+
 
 Mais informações e explicações sobre o [Rebasing](http://git-scm.com/book/en/Git-Branching-Rebasing)
 
@@ -348,9 +348,9 @@ Mais informações e explicações sobre o [Rebasing](http://git-scm.com/book/en
 Para alternar entre um branch e outro é necessário fazer o commit das alterações atuais para depois trocar para um outro branch. Se existir a necessidade de realizar a troca sem fazer o commit é possível criar um **stash**. O Stash como se fosse um branch temporário que contem apenas as alterações ainda não commitadas.
 
 ##### Criar um stash
-	
+
 	git stash
-	
+
 ##### Listar stashes
 
 	git stash list
@@ -360,9 +360,9 @@ Para alternar entre um branch e outro é necessário fazer o commit das alteraç
 	git stash apply
 
 ##### Voltar para um stash específico
-	
+
 	git stash apply stash@{2}
-	
+
 Onde **2** é o indíce do stash desejado.
 
 ##### Criar um branch a partir de um stash
@@ -408,19 +408,19 @@ mudando as linhas ou removendo.
 
 ##### Juntando vários commits
 Seguir os mesmos passos acima, porém marcar os commtis que devem ser juntados com **squash*
-	
+
 ##### Remover todo histórico de um arquivo
 
 	git filter-branch --tree-filter 'rm -f passwords.txt' HEAD
-	
-	
+
+
 ### Bisect
 O bisect (pesquisa binária) é útil para encontrar um commit que esta gerando um bug ou uma inconsistência entre uma sequência de commits.
 
 ##### Iniciar pequinsa binária
 
 	git bisect start
-	
+
 ##### Marcar o commit atual como ruim
 
 	git bisect bad
@@ -438,13 +438,12 @@ O GIT irá navegar entre os commits para ajudar a indentificar o commit que esta
 Se o commit estiver com o problema, então ele deverá ser marcado como **ruim**.
 
  	git bisect bad
- 
+
 ##### Finalizar a pesquisa binária
 Depois de encontrar o commit com problema, para retornar para o *HEAD* utilize:
-	
+
 	git bisect reset
- 	
+
 ## Documentação Oficial
 
 -https://git-scm.com/docs/git/pt_BR
-
