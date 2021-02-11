@@ -1,4 +1,4 @@
-<img src="https://git-scm.com/images/logo@2x.png" width="60" height="60">
+<img src="/images/logo@2x.png" width="110" height="46" alt="Git">
 
 # Comandos mais utilizados
 
