@@ -2,8 +2,6 @@
 
 # Comandos mais utilizados
 
-# GIT
-
 ## Estados
 
 * Modificado (modified);
