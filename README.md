@@ -1,5 +1,6 @@
-# Comandos mais utilizados
+<img src="https://git-scm.com/images/logo@2x.png" width="60" height="60">
 
+# Comandos mais utilizados
 
 # GIT
 
