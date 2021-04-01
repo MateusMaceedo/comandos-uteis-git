@@ -1,6 +1,8 @@
-<img src="https://git-scm.com/images/logo@2x.png" width="110" height="46" alt="Git">
+<h1 align="center">
+   <img src="https://git-scm.com/images/logo@2x.png" width="110" height="46" alt="Git">
+</h1>
 
-# Comandos mais utilizados
+<p align="center">A ideia central desse projeto é centralizar padrões e mostrar o quanto é necessario o git no dia a dia do dev. Aqui listo comandos, consultas e alterações que podem ser feitas em diferentes ambientes e sistemas operacionais, a ideia do git é contratar o versionamento da aplicação e ter total controle da versões que podem ou não subir para produção</p>
 
 ## Estados
 
