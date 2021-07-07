@@ -445,6 +445,5 @@ Depois de encontrar o commit com problema, para retornar para o *HEAD* utilize:
 
 	git bisect reset
 
-## Documentação Oficial
-
--https://git-scm.com/docs/git/pt_BR
+- [Documentação Oficial](https://git-scm.com/docs/git/pt_BR)
+- [Desfazendo mudanças locais](https://metring.com.br/git-desfazendo-mudancas-locais)
