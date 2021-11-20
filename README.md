@@ -445,5 +445,14 @@ Depois de encontrar o commit com problema, para retornar para o *HEAD* utilize:
 
 	git bisect reset
 
+##### Git se recusa a mesclar históricos não relacionados no rebase
+	
+```
+git pull origin master --allow-unrelated-histories
+git merge origin origin/master
+... add and commit here...
+git push origin master
+```
+
 - [Documentação Oficial](https://git-scm.com/docs/git/pt_BR)
 - [Desfazendo mudanças locais](https://metring.com.br/git-desfazendo-mudancas-locais)
